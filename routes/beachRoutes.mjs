@@ -22,7 +22,7 @@ router.get("/", async (req, res) => {
 //read one
 router.get("/:id", async (req, res) => {
   //specify action
-  const oneBeach = await Beach.findById(req.params.id, {
+  const oneBeach = await Beach.findById(req.params.id, req.body, {
     new: true,
   });
 
